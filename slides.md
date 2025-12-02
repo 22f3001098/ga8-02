@@ -1,10 +1,12 @@
 ---
 marp: true
-theme: default
+theme: custom-tech
 paginate: true
 header: 'Product Documentation'
 footer: '22f3001098@ds.study.iitm.ac.in'
 style: |
+  @import 'default';
+  
   section {
     background-color: #f5f5f5;
     color: #333;
@@ -35,6 +37,7 @@ style: |
     color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
   blockquote {
@@ -42,6 +45,12 @@ style: |
     padding-left: 20px;
     font-style: italic;
     color: #555;
+  }
+  
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   
   table {
@@ -102,6 +111,8 @@ Our API Gateway provides a unified entry point for microservices with the follow
 - **Authentication**: OAuth 2.0 and JWT support
 - **Caching**: Distributed Redis-based caching
 
+<div class="columns">
+
 **Benefits:**
 - Improved security
 - Better performance
@@ -112,6 +123,8 @@ Our API Gateway provides a unified entry point for microservices with the follow
 - Redis
 - PostgreSQL
 - Docker
+
+</div>
 
 ---
 
@@ -140,13 +153,12 @@ Where:
 
 ---
 
-<!-- _backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')" -->
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200') -->
 <!-- _color: white -->
 
-# API Endpoints
+## API Endpoints
 
 ### Core Routes
-
 ```javascript
 // User Management
 GET    /api/v2/users
@@ -165,7 +177,6 @@ POST   /api/v2/auth/logout
 ## Configuration Guide
 
 ### Environment Variables
-
 ```bash
 # Server Configuration
 PORT=3000
@@ -211,7 +222,6 @@ Where $C$ = capacity, $R$ = rate, $W$ = window, $B$ = burst
 ---
 
 ## Authentication Flow
-
 ```python
 def authenticate_request(token):
     """
@@ -238,7 +248,6 @@ def authenticate_request(token):
 ## Deployment Instructions
 
 ### Docker Deployment
-
 ```dockerfile
 FROM node:18-alpine
 
@@ -264,6 +273,8 @@ CMD ["node", "server.js"]
 
 ### Key Metrics to Track
 
+<div class="columns">
+
 **Performance Metrics:**
 - Request latency (p50, p95, p99)
 - Throughput (req/sec)
@@ -275,6 +286,8 @@ CMD ["node", "server.js"]
 - User authentication success rate
 - Rate limit violations
 - Geographic distribution
+
+</div>
 
 ### Mathematical Model for Capacity Planning
 
@@ -293,7 +306,6 @@ Where $T$ = target throughput, $L$ = latency, $C$ = CPU cores, $U$ = utilization
 3. **Use environment variables** for secrets
 4. **Enable CORS** with specific origins only
 5. **Implement request signing** for sensitive endpoints
-
 ```javascript
 // Example: Request signature verification
 const crypto = require('crypto');
@@ -349,7 +361,6 @@ DEBUG=api-gateway:* npm start
 ### Load Test Results
 
 Benchmark configuration: 1000 concurrent users, 60-second duration
-
 ```
 Requests per second:    2,450 [#/sec] (mean)
 Time per request:       408 [ms] (mean)
