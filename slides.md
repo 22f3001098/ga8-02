@@ -153,8 +153,9 @@ Where:
 
 ---
 
-<!-- backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200') -->
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200') -->
 <!-- _color: white -->
+<!-- _style: "background-size: cover; background-position: center;" -->
 
 ## API Endpoints
 
