@@ -1,12 +1,10 @@
 ---
 marp: true
-theme: custom-tech
+theme: default
 paginate: true
 header: 'Product Documentation'
 footer: '22f3001098@ds.study.iitm.ac.in'
 style: |
-  @import 'default';
-  
   section {
     background-color: #f5f5f5;
     color: #333;
@@ -37,7 +35,6 @@ style: |
     color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
   blockquote {
@@ -45,12 +42,6 @@ style: |
     padding-left: 20px;
     font-style: italic;
     color: #555;
-  }
-  
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
   
   table {
@@ -111,8 +102,6 @@ Our API Gateway provides a unified entry point for microservices with the follow
 - **Authentication**: OAuth 2.0 and JWT support
 - **Caching**: Distributed Redis-based caching
 
-<div class="columns">
-
 **Benefits:**
 - Improved security
 - Better performance
@@ -123,8 +112,6 @@ Our API Gateway provides a unified entry point for microservices with the follow
 - Redis
 - PostgreSQL
 - Docker
-
-</div>
 
 ---
 
@@ -153,11 +140,10 @@ Where:
 
 ---
 
-<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200') -->
+<!-- _backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')" -->
 <!-- _color: white -->
-<!-- _style: "background-size: cover; background-position: center;" -->
 
-## API Endpoints
+# API Endpoints
 
 ### Core Routes
 
@@ -278,8 +264,6 @@ CMD ["node", "server.js"]
 
 ### Key Metrics to Track
 
-<div class="columns">
-
 **Performance Metrics:**
 - Request latency (p50, p95, p99)
 - Throughput (req/sec)
@@ -291,8 +275,6 @@ CMD ["node", "server.js"]
 - User authentication success rate
 - Rate limit violations
 - Geographic distribution
-
-</div>
 
 ### Mathematical Model for Capacity Planning
 
